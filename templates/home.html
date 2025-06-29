@@ -1,0 +1,38 @@
+<!-- templates/entries.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Password Entries</title>
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+  <h2>Welcome</h2>
+  <table id="entries-table" border="1">
+    <thead>
+      <tr>
+        <th>Site</th>
+        <th>Username</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- home.js will populate this -->
+    </tbody>
+  </table>
+  <form id="get-password">
+      <input type="text" id="site_name" placeholder="Site Name" required />
+      <button type="submit">Get Password</button>
+  </form>
+  <form id="Add-password">
+      <input type="text" id="site_name" placeholder="Site Name" required />
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Add Password</button>
+      <button type="button" id="generate-password">Generate Password</button>
+  </form>
+  <p id="error-msg" style="color:red;"></p>
+
+  <script src="{% static 'js/home.js' %}"></script>
+</body>
+</html>
